@@ -49,9 +49,9 @@ function HeadmasterDashboard() {
     }
   });
 
-  window.addEventListener('scroll', () => {
-    setVisible(false);
-  });
+  window.addEventListener('scroll', () =>
+    !desktop ? setVisible(false) : setVisible(true)
+  );
 
   return (
     <div>
