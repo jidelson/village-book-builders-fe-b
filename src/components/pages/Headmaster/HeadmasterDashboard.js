@@ -59,10 +59,8 @@ function HeadmasterDashboard() {
         <Switch>
           <Route path="/mentor-pairings" component={TestComponent} />
           <Route path="/mentor-advisor" />
-          <Route path="/school-village">
-            <Village />
-            <Schools />
-          </Route>
+          <Route path="/school" component={Schools} />
+          <Route path="/village" component={Village} />
           <Route
             exact
             path="/village/edit/:villageId"
@@ -107,8 +105,11 @@ function HeadmasterDashboard() {
           <NavLink to="/mentor-advisor" onClick={() => setVisible(true)}>
             <button className="btn l2-btn menuLinks">Mentor Advisor</button>
           </NavLink>
-          <NavLink to="/school-village" onClick={() => setVisible(true)}>
-            <button className="btn l2-btn menuLinks">School/Village</button>
+          <NavLink to="/village" onClick={() => setVisible(true)}>
+            <button className="btn l2-btn menuLinks">Village</button>
+          </NavLink>
+          <NavLink to="/school" onClick={() => setVisible(true)}>
+            <button className="btn l2-btn menuLinks">School</button>
           </NavLink>
           <NavLink to="/library" onClick={() => setVisible(true)}>
             <button className="btn l2-btn menuLinks">Library</button>
