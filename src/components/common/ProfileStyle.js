@@ -7,6 +7,7 @@ export const Profile = styled.div`
   padding: 2rem;
   margin: auto;
   width: 66%;
+  /* height: fit-content; */
   letter-spacing: 0.05rem;
 `;
 

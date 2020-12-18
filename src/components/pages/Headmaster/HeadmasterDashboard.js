@@ -49,26 +49,24 @@ function HeadmasterDashboard() {
     }
   });
 
-  window.addEventListener('scroll', () =>
-    !desktop ? setVisible(false) : setVisible(true)
-  );
-
   return (
     <div>
       <Dashboard>
-        <Switch>
-          <Route path="/mentor-pairings" component={TestComponent} />
-          <Route path="/mentor-advisor" />
-          <Route path="/school" component={Schools} />
-          <Route path="/village" component={Village} />
-          <Route
-            exact
-            path="/village/edit/:villageId"
-            component={VillageForm}
-          />
-          <Route exact path="/school/edit/:schoolId" component={SchoolForm} />
-          <Route path="/library" />
-        </Switch>
+        <div className="dashboard">
+          <Switch>
+            <Route path="/mentor-pairings" component={TestComponent} />
+            <Route path="/mentor-advisor" />
+            <Route exact path="/school" component={Schools} />
+            <Route exact path="/village" component={Village} />
+            <Route
+              exact
+              path="/village/edit/:villageId"
+              component={VillageForm}
+            />
+            <Route exact path="/school/edit/:schoolId" component={SchoolForm} />
+            <Route path="/library" />
+          </Switch>
+        </div>
       </Dashboard>
 
       {desktop ? null : (

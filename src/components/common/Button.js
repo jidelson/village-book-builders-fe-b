@@ -9,12 +9,10 @@ const Btn = styled.button`
   font-style: italic;
   letter-spacing: 2px;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 1.4rem;
   color: white;
   border-radius: 18px;
-  padding: 8px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 8px 15px;
   -webkit-appearance: none;
   margin: 1rem 0;
   text-align: right;
@@ -22,6 +20,10 @@ const Btn = styled.button`
     background-color: #4c4c49;
     color: #b5b5b5;
     transition: all 200ms linear;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 90%;
+    padding: 12px;
   }
 `;
 

@@ -14,7 +14,10 @@ export const tailLayout = {
 export const FormContainer = styled.div`
   padding: 1rem;
   position: relative;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
   .ant-col {
     align-self: center;
   }
@@ -38,6 +41,7 @@ export const Required = styled.p`
     display: block;
     margin-left: -3.2rem;
     margin-top: 0.4rem;
+    margin-left: -33%;
   }
   span#required {
     color: red;
